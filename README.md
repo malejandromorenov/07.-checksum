@@ -9,6 +9,7 @@ https://www.microsoft.com/en-us/download/details.aspx?id=11533
 
 Generate algorythm for Linux
 echo www.google.com |md5sum
+
 echo www.google.com |shasum
 
 Alternative is surfing for explorer and generate archive or carpet algorythm
