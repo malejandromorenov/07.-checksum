@@ -108,14 +108,14 @@ has been compromised.
 
 It checks each entry stored in the db and verify that the checksum was not modified.
 
-6. History:
+6.History:
 -----------
-Fciv 1.2 : Added event log.
-Fciv 1.21: Fixed bad keyset error on some computers.
-Fciv 1.22: Added -type option. Support up to 10 masks. *.exe *.dll ...
-Fciv 2.0:  xml as unique storage. Added -both option.
-Fciv 2.01: Exit with error code to allow detections of problem in a script.
-Fciv 2.02: Improved perfs. When both alg are specified, it's now done in one pass.
-Fciv 2.03: Added -wp and -bp options. Fciv now stores full path or relatives paths.
-Fciv 2.04: Removed several options to simplify it.
-Fciv 2.05: Added success message if the verification did not detect any errors.
+- Fciv 1.2 : Added event log.
+- Fciv 1.21: Fixed bad keyset error on some computers.
+- Fciv 1.22: Added -type option. Support up to 10 masks. *.exe *.dll ...
+- Fciv 2.0:  xml as unique storage. Added -both option.
+- Fciv 2.01: Exit with error code to allow detections of problem in a script.
+- Fciv 2.02: Improved perfs. When both alg are specified, it's now done in one pass.
+- Fciv 2.03: Added -wp and -bp options. Fciv now stores full path or relatives paths.
+- Fciv 2.04: Removed several options to simplify it.
+- Fciv 2.05: Added success message if the verification did not detect any errors.
