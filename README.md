@@ -1,9 +1,19 @@
-# CHECKSUM
+# Checksums & GnuPG Signing
 
 A checksum is a small-sized datum derived from a block of digital data for the purpose of detecting errors which may have been introduced during its transmission or storage. It is usually applied to an installation file after it is received from the download server. By themselves, checksums are often used to verify data integrity but are not relied upon to verify data authenticity.
 
-## Microsoft
-https://www.microsoft.com/en-us/download/details.aspx?id=11533
+###### File formats
+A checksum file is a small file that contains the checksums of other files.
+There are a few known checksum file formats
+Several utilities, such as md5deep, can use such checksum files to automatically verify an entire directory of files in one operation.
+The particular hash algorithm used is often indicated by the file extension of the checksum file.
+
+1. ".sha1" file extension indicates a checksum file containing 160-bit SHA-1 hashes in sha1sum format.
+2. ".md5" file extension, or a file named "MD5SUMS", indicates a checksum file containing 128-bit MD5 hashes in md5sum format.
+3. ".sfv" file extension indicates a checksum file containing 32-bit CRC32 checksums in simple file verification format.
+4. "crc.list" file indicates a checksum file containing 32-bit CRC checksums in brik format.
+
+# Linux
 
 Generate algorythm for Linux
 ```sh
@@ -11,6 +21,9 @@ Generate algorythm for Linux
 
 - echo www.google.com |shasum
 ```
+
+
+# Microsoft
 
 Alternative is surfing for explorer and generate archive or carpet algorythm
 
@@ -24,6 +37,8 @@ Microsoft (R) File Checksum Integrity Verifier V2.05 README file
 5.Verification.
 6.History.
 
+## Download Microsoft Command Line
+[Download](https://www.microsoft.com/en-us/download/details.aspx?id=11533)
 
 1.What is fciv?
 ---------------
