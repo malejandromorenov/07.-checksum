@@ -63,7 +63,7 @@ With fciv, you can compute hashes of all your sensitive files.
 When you suspect that your system has been compromised, you can run a verification to determine which files have been modified.
 You can also schedule verifications regularily.
 
-###### 2.Features:
+### 2.Features:
 -----------
 - Hash algorithm: MD5 , SHA1 or both ( default MD5).
 - Display to screen or store hash and filename in a xml file.
@@ -73,7 +73,7 @@ You can also schedule verifications regularily.
 - hashes and signature verifications.
 - store filename with or without full path.
 
-###### 3.Syntax:
+### 3.Syntax:
 ---------
 Usage:  fciv.exe [Commands] <Options>
 
@@ -114,7 +114,7 @@ Verifications:
         fciv.exe -v -sha1 -xml db.xml
         fciv.exe -v -bp c:\mydir -sha1 -xml db.xml
         
-###### 4.Database storage format:
+### 4.Database storage format:
 --------------------------
 xml file.
 
@@ -128,14 +128,14 @@ The hash is stored in base 64.
 	</FILE_ENTRY>
 </FCIV>	
 
-###### 5.Verification:
+### 5.Verification:
 ---------------
 You can build a hash database of your sensitive files and verify them regularily or when you suspect that your system
 has been compromised.
 
 It checks each entry stored in the db and verify that the checksum was not modified.
 
-###### 6.History:
+### 6.History:
 -----------
 - Fciv 1.2 : Added event log.
 - Fciv 1.21: Fixed bad keyset error on some computers.
@@ -152,7 +152,7 @@ ________________________________________________________________________________
 # Generate GPG File
 Generate a GPG key pair. Since there are multiple versions of GPG, you many need to consult the relevant man page to find the appropriate key generation command. Your GPG key must use RSA with a key size of 4096 bits.
 
-###### Create GPG Keys
+### Create GPG Keys
 
 ```sh
 gpg --full-generate-key
