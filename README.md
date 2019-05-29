@@ -39,15 +39,15 @@ SHA1 7771ddaffb7bc23c7cb94c7bbfdb92b94c60e820   filename.zip
 
 Alternative is surfing for explorer and generate archive or carpet algorythm
 
-## Microsoft (R) File Checksum Integrity Verifier V2.05 README file
+## Microsoft (R) File Checksum Integrity Verifier
 ================================================================
 
-1.What is File Checksum Integrity Verifier (FCIV)?
-2.Features.
-3.Syntax.
-4.Database storage format.
-5.Verification.
-6.History.
+1. What is File Checksum Integrity Verifier (FCIV)?
+2. Features.
+3. Syntax.
+4. Database storage format.
+5. Verification.
+6. History.
 
 ## Download Microsoft Command Line
 [Download](https://www.microsoft.com/en-us/download/details.aspx?id=11533)
