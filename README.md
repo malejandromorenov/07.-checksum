@@ -12,6 +12,7 @@ The particular hash algorithm used is often indicated by the file extension of t
 2. ".md5" file extension, or a file named "MD5SUMS", indicates a checksum file containing 128-bit MD5 hashes in md5sum format.
 3. ".sfv" file extension indicates a checksum file containing 32-bit CRC32 checksums in simple file verification format.
 4. "crc.list" file indicates a checksum file containing 32-bit CRC checksums in brik format.
+5. ".gpg" GNU Privacy Guard (GnuPG or GPG) is an encryption tool and digital signatures is a replacement for the PGP (Pretty Good Privacy) but with the main difference being free software licensed under the GPL. GPG uses the IETF standard called OpenPGP.
 
 # Linux - Ubuntu 18.04
 
@@ -33,7 +34,6 @@ Return something like the following bond
 MD5 ba6aafee992a08a8504102864fa36934c  filename.zip
 SHA1 7771ddaffb7bc23c7cb94c7bbfdb92b94c60e820   filename.zip
 ```
-
 
 # Microsoft
 
@@ -146,3 +146,49 @@ It checks each entry stored in the db and verify that the checksum was not modif
 - Fciv 2.03: Added -wp and -bp options. Fciv now stores full path or relatives paths.
 - Fciv 2.04: Removed several options to simplify it.
 - Fciv 2.05: Added success message if the verification did not detect any errors.
+
+_________________________________________________________________________________________________________________________________
+
+# Generate GPG File
+Generate a GPG key pair. Since there are multiple versions of GPG, you many need to consult the relevant man page to find the appropriate key generation command. Your GPG key must use RSA with a key size of 4096 bits.
+
+###### Create GPG Keys
+
+```sh
+gpg --full-generate-key
+```
+1. Select what kind of key you want. We recommend RSA and RSA (default) [1].
+1. Enter the desired key size. We recommend the maximum key size of 4096.
+2. Enter the length of time the key should be valid. Press Enter to specify the default selection, indicating that the key doesn't expire [0].
+3. Verify that your selections are correct [y/N].
+4. Enter your user ID information.
+a) Real Name:
+b) E-mail:
+c) Comment:
+d) Confirmm the information write is correct.
+e) Enter password:
+
+
+Use the
+```sh
+gpg --list-secret-keys --keyid-format
+```
+LONG command to list GPG keys for which you have both a public and private key. A private key is required for signing commits or tags.
+
+From the list of GPG keys, copy the GPG key ID you'd like to use. In this example, the GPG key ID is 3AA5C34371567BD2:
+```sh
+gpg --list-secret-keys --keyid-format LONG
+/Users/hubot/.gnupg/secring.gpg
+------------------------------------
+sec   4096R/3AA5C34371567BD2 2016-03-10 [expires: 2017-03-10]
+uid                          Hubot 
+ssb   4096R/42B317FD4BA89E7A 2016-03-10
+Paste the text below, substituting in the GPG key ID you'd like to use. In this example, the GPG key ID is 3AA5C34371567BD2:
+```
+and
+
+```sh
+gpg --armor --export 3AA5C34371567BD2
+# Prints the GPG key ID, in ASCII armor format
+```
+Copy your GPG key, beginning with -----BEGIN PGP PUBLIC KEY BLOCK----- and ending with -----END PGP PUBLIC KEY BLOCK-----.
