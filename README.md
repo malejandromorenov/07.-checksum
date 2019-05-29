@@ -191,4 +191,10 @@ and
 gpg --armor --export 3AA5C34371567BD2
 # Prints the GPG key ID, in ASCII armor format
 ```
-Copy your GPG key, beginning with -----BEGIN PGP PUBLIC KEY BLOCK----- and ending with -----END PGP PUBLIC KEY BLOCK-----.
+Copy your GPG key, beginning with 
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+and ending with
+
+-----END PGP PUBLIC KEY BLOCK-----.
