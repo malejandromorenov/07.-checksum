@@ -13,7 +13,7 @@ The particular hash algorithm used is often indicated by the file extension of t
 3. ".sfv" file extension indicates a checksum file containing 32-bit CRC32 checksums in simple file verification format.
 4. "crc.list" file indicates a checksum file containing 32-bit CRC checksums in brik format.
 
-# Linux
+# Linux - Ubuntu 18.04
 
 Generate algorythm for Linux
 ```sh
@@ -21,13 +21,25 @@ Generate algorythm for Linux
 
 - echo www.google.com |shasum
 ```
+Verify file integrity
+```sh
+md5sum filename.zip
+
+sha1sum filename.zip
+```
+
+Return something like the following bond
+```
+MD5 ba6aafee992a08a8504102864fa36934c  filename.zip
+SHA1 7771ddaffb7bc23c7cb94c7bbfdb92b94c60e820   filename.zip
+```
 
 
 # Microsoft
 
 Alternative is surfing for explorer and generate archive or carpet algorythm
 
-Microsoft (R) File Checksum Integrity Verifier V2.05 README file
+## Microsoft (R) File Checksum Integrity Verifier V2.05 README file
 ================================================================
 
 1.What is File Checksum Integrity Verifier (FCIV)?
@@ -40,7 +52,7 @@ Microsoft (R) File Checksum Integrity Verifier V2.05 README file
 ## Download Microsoft Command Line
 [Download](https://www.microsoft.com/en-us/download/details.aspx?id=11533)
 
-1.What is fciv?
+###### 1.What is fciv?
 ---------------
 Fciv is a command line utility that computes and verifies hashes of files.
 
@@ -51,7 +63,7 @@ With fciv, you can compute hashes of all your sensitive files.
 When you suspect that your system has been compromised, you can run a verification to determine which files have been modified.
 You can also schedule verifications regularily.
 
-2.Features:
+###### 2.Features:
 -----------
 - Hash algorithm: MD5 , SHA1 or both ( default MD5).
 - Display to screen or store hash and filename in a xml file.
@@ -61,7 +73,7 @@ You can also schedule verifications regularily.
 - hashes and signature verifications.
 - store filename with or without full path.
 
-3.Syntax:
+###### 3.Syntax:
 ---------
 Usage:  fciv.exe [Commands] <Options>
 
@@ -102,7 +114,7 @@ Verifications:
         fciv.exe -v -sha1 -xml db.xml
         fciv.exe -v -bp c:\mydir -sha1 -xml db.xml
         
-4.Database storage format:
+###### 4.Database storage format:
 --------------------------
 xml file.
 
@@ -116,14 +128,14 @@ The hash is stored in base 64.
 	</FILE_ENTRY>
 </FCIV>	
 
-5.Verification:
+###### 5.Verification:
 ---------------
 You can build a hash database of your sensitive files and verify them regularily or when you suspect that your system
 has been compromised.
 
 It checks each entry stored in the db and verify that the checksum was not modified.
 
-6.History:
+###### 6.History:
 -----------
 - Fciv 1.2 : Added event log.
 - Fciv 1.21: Fixed bad keyset error on some computers.
