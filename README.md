@@ -42,17 +42,17 @@ Alternative is surfing for explorer and generate archive or carpet algorythm
 ## Microsoft (R) File Checksum Integrity Verifier
 ___________________________________________________________________________________________________
 
-###### 1. What is File Checksum Integrity Verifier (FCIV)?
+1. What is File Checksum Integrity Verifier (FCIV)?
 2. Features
 3. Syntax
 4. Database storage format
 5. Verification
-###### 6. History
+6. History
 
 ## Download Microsoft Command Line
 [Download](https://www.microsoft.com/en-us/download/details.aspx?id=11533)
 
-###### 1.What is fciv?
+####### 1.What is fciv?
 ---------------
 Fciv is a command line utility that computes and verifies hashes of files.
 
